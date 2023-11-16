@@ -6,7 +6,16 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
+      appBar: AppBar(
+        title: const Row(
+          children: [
+            Icon(
+              Icons.ac_unit_outlined,
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
+ 
