@@ -1,18 +1,12 @@
+
 import 'package:flutter/material.dart';
-import 'package:mini_project_bloc/screens/screens.dart';
+
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:mini_project_bloc/app/app_observer.dart';
+import 'package:mini_project_bloc/store/view/store_app_cubit.dart';
 
 void main() {
-  runApp(const MyApp());
-}
+  Bloc.observer = AppObserver();
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home:  Home(),
-    );
-  }
+  runApp(const StoreAppCubit());
 }
